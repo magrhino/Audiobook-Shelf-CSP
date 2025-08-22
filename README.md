@@ -4,7 +4,7 @@ Absolutely! Here’s a cleaned-up and GitHub-appropriate version of your post, t
 
 ⸻
 
-🛡️ Working CSP Setup for Audiobookshelf Behind NPMplus (OpenResty)
+🛡️ Working CSP Setup for Audiobookshelf Behind [NPMplus](https://github.com/ZoeyVid/NPMplus)
 
 Hey everyone,
 
@@ -41,18 +41,11 @@ default-src 'none'
 
 ⚠️ Known Limitation
 	•	Mozilla Observatory still flags the config due to 'unsafe-inline'.
-Unfortunately, this is currently required since Audiobookshelf uses inline scripts and styles.
+Unfortunately, this is currently required since Audiobookshelf uses inline scripts and styles as far I understand it.
 	•	I haven’t implemented nonce or hash support yet. If anyone gets nonces working cleanly with NPMplus, please share!
+ 	•	I haven’t tested this yet with [Nginx Proxy Manager](https://github.com/NginxProxyManager/nginx-proxy-manager), if anyone tries let me know I suspect it may work there as well.
 
 ⸻
 
 Hope this helps anyone looking to harden their Audiobookshelf instance behind NPMplus.
 Feel free to open an issue or pull request if you improve upon this setup!
-
-⸻
-
-Once this is posted on GitHub, you can link to it directly in your Reddit post with something like:
-
-I posted my full working NPMplus CSP config for Audiobookshelf on GitHub: [GitHub link here] — hope it helps others!
-
-Let me know if you want help writing the actual Nginx config or setting up the GitHub repo/page!
