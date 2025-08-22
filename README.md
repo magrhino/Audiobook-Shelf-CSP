@@ -1,9 +1,5 @@
 # Audiobook-Shelf-CSP
 Working CSP policy for audiobookshelf in the advanced configuration section of npmplus (npm untested)
-Absolutely! Here’s a cleaned-up and GitHub-appropriate version of your post, tailored as a README.md or issue/discussion post. It’s structured, concise, and formatted with Markdown for GitHub clarity.
-
-⸻
-
 🛡️ Working CSP Setup for Audiobookshelf Behind [NPMplus](https://github.com/ZoeyVid/NPMplus)
 
 Hey everyone,
