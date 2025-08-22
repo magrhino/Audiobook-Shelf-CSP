@@ -31,7 +31,8 @@ location ~* ^/.*/?(sw|service-worker)\.js$ {
 
 ✅ What This Does
 - Blocks everything by default: ```default-src 'none'```
-- Whitelists only the domains Audiobookshelf actually uses:
+
+Whitelists only the domains Audiobookshelf actually uses:
 - Google Books
 - OpenLibrary
 - Archive.org
