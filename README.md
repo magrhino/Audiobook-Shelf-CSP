@@ -17,9 +17,17 @@ This setup:
 
 🔧 Nginx/NPMplus Custom Configuration
 
-Replace (CODE HERE) with your actual configuration snippet
+```
+# Global CSP (strict)
+more_clear_headers 'Content-Security-Policy';
+add_header Content-Security-Policy "default-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'; manifest-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://books.google.com https://m.media-amazon.com https://covers.openlibrary.org https://*.openlibrary.org https://archive.org https://*.archive.org https://*.mzstatic.com https://fantlab.ru https://*.fantlab.ru; connect-src 'self' wss: https://api.github.com/repos/advplyr/audiobookshelf/releases; media-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; upgrade-insecure-requests" always;
 
-(code here)
+# Relaxed CSP for any service worker file at root or in subfolders
+location ~* ^/.*/?(sw|service-worker)\.js$ {
+  more_clear_headers 'Content-Security-Policy';
+  add_header Content-Security-Policy "default-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'; manifest-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://books.google.com https://m.media-amazon.com https://covers.openlibrary.org https://*.openlibrary.org; connect-src 'self' wss: https://api.github.com/repos/advplyr/audiobookshelf/releases; media-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; upgrade-insecure-requests" always;
+}
+```
 
 ✅ What This Does
 	•	Blocks everything by default:
