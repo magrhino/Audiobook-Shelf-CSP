@@ -30,20 +30,18 @@ location ~* ^/.*/?(sw|service-worker)\.js$ {
 ```
 
 ✅ What This Does
-	•	Blocks everything by default:
-default-src 'none'
-	•	Whitelists only the domains Audiobookshelf actually uses:
-	•	Google Books
-	•	OpenLibrary
-	•	Archive.org
-	•	Apple cover images (mzstatic)
-	•	Loosens CSP for the service worker to allow pulling Workbox from jsDelivr
+- Blocks everything by default: ```default-src 'none'```
+- Whitelists only the domains Audiobookshelf actually uses:
+- Google Books
+- OpenLibrary
+- Archive.org
+- Apple cover images (mzstatic)
+- Loosens CSP for the service worker to allow pulling Workbox from jsDelivr
 
 ⚠️ Known Limitation
-	•	Mozilla Observatory still flags the config due to 'unsafe-inline'.
-Unfortunately, this is currently required since Audiobookshelf uses inline scripts and styles as far I understand it.
-	•	I haven’t implemented nonce or hash support yet. If anyone gets nonces working cleanly with NPMplus, please share!
- 	•	I haven’t tested this yet with [Nginx Proxy Manager](https://github.com/NginxProxyManager/nginx-proxy-manager), if anyone tries let me know I suspect it may work there as well.
+- Mozilla Observatory still flags the config due to 'unsafe-inline'. Unfortunately, this is currently required since Audiobookshelf uses inline scripts and styles as far I understand it.
+- I haven’t implemented nonce or hash support yet. If anyone gets nonces working cleanly with NPMplus, please share!
+- I haven’t tested this yet with [Nginx Proxy Manager](https://github.com/NginxProxyManager/nginx-proxy-manager), if anyone tries let me know I suspect it may work there as well.
 
 ⸻
 
