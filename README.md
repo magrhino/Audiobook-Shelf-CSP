@@ -11,9 +11,9 @@ Hey everyone,
 Just wanted to share a working Content Security Policy (CSP) configuration I’ve been using with NPMplus as a reverse proxy for Audiobookshelf.
 
 This setup:
-	•	Clears any CSP headers from upstream
-	•	Applies a strict global policy
-	•	Still allows the app (and its service worker) to function correctly
+- Clears any CSP headers from upstream
+- Applies a strict global policy
+- Still allows the app (and its service worker) to function correctly
 
 🔧 Nginx/NPMplus Custom Configuration
 
